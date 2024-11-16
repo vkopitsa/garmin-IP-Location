@@ -1,0 +1,30 @@
+<layouts>
+    <layout id="Summary">
+        <label id="title" text="@Strings.AppName" x="center" y="10" font="Gfx.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+
+        <label id="ipLabel" text="@Strings.ipLabel" x="center" y="30" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+        <label id="countryLabel" text="@Strings.countryLabel" x="center" y="50" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+        <label id="cityLabel" text="@Strings.cityLabel" x="center" y="110" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+        <label id="regionLabel" text="@Strings.regionLabel" x="center" y="130" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+        <label id="continentLabel" text="@Strings.continentLabel" x="center" y="150" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+        <label id="currencyLabel" text="@Strings.currencyLabel" x="center" y="170" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+
+        <label id="latitudeLabel" text="@Strings.latitudeLabel" x="center" y="190" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+        <label id="longitudeLabel" text="@Strings.longitudeLabel" x="center" y="210" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+
+        <label id="ip" text="@Strings.loading" x="center" y="30" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+        <label id="country" text="@Strings.loading" x="center" y="50" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+        <label id="city" text="@Strings.loading" x="center" y="110" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+        <label id="region" text="@Strings.loading" x="center" y="130" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+        <label id="continent" text="@Strings.loading" x="center" y="150" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+        <label id="currency" text="@Strings.loading" x="center" y="170" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+
+        <label id="latitude" text="@Strings.loading" x="center" y="190" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+        <label id="longitude" text="@Strings.loading" x="center" y="210" font="Graphics.FONT_SYSTEM_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+    </layout>
+
+    <layout id="Gcm">
+        <label x="center" y="70" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.connectString1" />
+        <label x="center" y="90" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.connectString2" />
+    </layout>
+</layouts>

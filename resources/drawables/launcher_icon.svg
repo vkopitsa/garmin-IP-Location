@@ -1,0 +1,15 @@
+<svg width="62" height="62" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle for Globe -->
+  <circle cx="31" cy="31" r="30" fill="#E0E0E0" stroke="#888888" stroke-width="2" />
+
+  <!-- Vertical and Horizontal lines for the globe -->
+  <line x1="31" y1="2" x2="31" y2="60" stroke="#555555" stroke-width="1.5" />
+  <line x1="2" y1="31" x2="60" y2="31" stroke="#555555" stroke-width="1.5" />
+
+  <!-- Location Pin -->
+  <path d="M31 18c4 0 7 3 7 7 0 3-2 5-3 7l-4 6-4-6c-1-2-3-4-3-7 0-4 3-7 7-7z" fill="#FF5252" />
+  <circle cx="31" cy="25" r="2" fill="white" />
+
+  <!-- IP Text -->
+  <text x="31" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333333" text-anchor="middle" font-weight="bold">IP</text>
+</svg>
