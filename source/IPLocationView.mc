@@ -27,30 +27,7 @@ class IPLocationView extends WatchUi.View {
     hidden var mYResetOffset = 0;
     hidden const elements as Array<String> = [
         "title",
-
-        "ipLabel",
-        "ip",
-
-        "countryLabel",
-        "country",
-
-        "cityLabel",
-        "city",
-
-        "regionLabel",
-        "region",
-
-        "continentLabel",
-        "continent",
-
-        "currencyLabel",
-        "currency",
-
-        "latitudeLabel",
-        "latitude",
-
-        "longitudeLabel",
-        "longitude",
+        "body",
     ] as Array<String>;
 
     function initialize() {
@@ -111,19 +88,30 @@ class IPLocationView extends WatchUi.View {
 
     function onReceiveIpInfo(responseCode as Number, data as Dictionary) as Void {
        if (responseCode == 200) {
-            (findDrawableById("ip") as WatchUi.Text).setText(data["ipAddress"]);
-            (findDrawableById("country") as WatchUi.Text).setText(data["countryName"]);
-            (findDrawableById("city") as WatchUi.Text).setText(data["cityName"]);
-            (findDrawableById("region") as WatchUi.Text).setText(data["regionName"]);
-            (findDrawableById("continent") as WatchUi.Text).setText(data["continent"]);
-            (findDrawableById("currency") as WatchUi.Text).setText((data["currency"] as Dictionary)["code"]);
 
-            (findDrawableById("latitude") as WatchUi.Text).setText(data["latitude"].format("%.6f"));
-            (findDrawableById("longitude") as WatchUi.Text).setText(data["longitude"].format("%.6f"));
-            requestUpdate();
+            var body = "";
+            body = body + WatchUi.loadResource(Rez.Strings.ipLabel) + data["ipAddress"] + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.countryLabel) + data["countryName"] + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.cityLabel) + data["cityName"] + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.regionLabel) + data["regionName"] + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.continentLabel) + Lang.format("$1$ ($2$)", [data["continent"], data["continentCode"]]) + "\n";
+
+            var currency = data["currency"] as Dictionary;
+            body = body + WatchUi.loadResource(Rez.Strings.currencyLabel) + Lang.format("$1$ ($2$)", [ currency["code"], currency["name"] ]) + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.latitudeLabel) + data["latitude"].format("%.6f") + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.longitudeLabel) + data["longitude"].format("%.6f") + "\n";
+
+            body = body + WatchUi.loadResource(Rez.Strings.timeZoneLabel) + Lang.format("$1$ ($2$)", [data["timeZone"], arrayToString(data["timeZones"])]) + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.zipCodeLabel) + data["zipCode"] + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.languageLabel) + data["language"] + "\n";
+            body = body + WatchUi.loadResource(Rez.Strings.tldsLabel) + arrayToString(data["tlds"]) + "\n";
+
+            (findDrawableById("body") as WatchUi.Text).setText(body);
        } else {
-           // TODO: handle error
+            (findDrawableById("body") as WatchUi.Text).setText(Rez.Strings.error);
        }
+
+       requestUpdate();
    }
 
    function makeRequest(url as String, params as Dictionary, responseCallback) {

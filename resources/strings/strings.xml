@@ -1,6 +1,8 @@
 <strings>
     <string id="AppName">IP Location</string>
 
+    <string id="error">Something went wrong.</string>
+
     <string id="ipLabel">IP: </string>
     <string id="countryLabel">Country: </string>
     <string id="cityLabel">City: </string>
@@ -9,6 +11,11 @@
     <string id="currencyLabel">Currency: </string>
     <string id="latitudeLabel">Latitude: </string>
     <string id="longitudeLabel">Longitude: </string>
+
+    <string id="timeZoneLabel">Time zone: </string>
+    <string id="zipCodeLabel">ZIP code: </string>
+    <string id="languageLabel">Language: </string>
+    <string id="tldsLabel">TLDs: </string>
 
     <string id="loading"> Loading...</string>
 
